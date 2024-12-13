@@ -1,8 +1,8 @@
-import 'dotenv/config'
+import "dotenv/config";
 import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 import { HumanMessage } from "@langchain/core/messages";
 import { MemorySaver } from "@langchain/langgraph";
-import { createReactAgent } from "@langchain/langgraph/prebuilt";    
+import { createReactAgent } from "@langchain/langgraph/prebuilt";
 import { ChatOpenAI } from "@langchain/openai";
 
 // Define the tools for the agent to use

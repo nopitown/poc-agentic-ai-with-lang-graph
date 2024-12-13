@@ -1,22 +1,28 @@
-import eslint from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';  
+import eslint from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import globals from "globals";
-import { config as tseslintConfig, parser as tseslintParser, configs as tseslintConfigs} from 'typescript-eslint';
+import {
+  config as tseslintConfig,
+  parser as tseslintParser,
+  configs as tseslintConfigs,
+} from "typescript-eslint";
 
 export default tseslintConfig(
   eslint.configs.recommended,
   importPlugin.flatConfigs.recommended,
   tseslintConfigs.strict,
   tseslintConfigs.stylistic,
+  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
       },
       ecmaVersion: "latest",
       sourceType: "module",
-      parser: tseslintParser
+      parser: tseslintParser,
     },
     ignores: ["node_modules/", "dist/", "out/"],
     settings: {
@@ -63,8 +69,8 @@ export default tseslintConfig(
     files: ["**/__tests__/**/*"],
     languageOptions: {
       globals: {
-        ...globals.jest
-      }
-    }
-  }
+        ...globals.jest,
+      },
+    },
+  },
 );
