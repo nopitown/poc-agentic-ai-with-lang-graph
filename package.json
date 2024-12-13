@@ -2,8 +2,10 @@
   "name": "poc-agentic-ai-with-lang-graph",
   "private": true,
   "scripts": {
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "start": "npx tsx src/agent.ts"
   },
+  "type": "module",
   "dependencies": {
     "@langchain/community": "^0.3.17",
     "@langchain/core": "^0.3.20",
@@ -20,6 +22,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "lefthook": "^1.9.2",
     "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.17.0"
   }

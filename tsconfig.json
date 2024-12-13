@@ -21,11 +21,7 @@
     "plugins": []
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/index.js"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
