@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      skip:
+        - rebase
+        - merge
+      glob: "*.{js,ts,tsx,mjs}"
+      run: npx eslint --fix {staged_files}

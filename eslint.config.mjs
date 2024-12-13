@@ -1,7 +1,7 @@
 import eslint from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import globals from "globals";
-import {config as tseslintConfig, parser as tseslintParser, configs as tseslintConfigs} from 'typescript-eslint';
+import { config as tseslintConfig, parser as tseslintParser, configs as tseslintConfigs} from 'typescript-eslint';
 
 export default tseslintConfig(
   eslint.configs.recommended,
